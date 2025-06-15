@@ -3,7 +3,7 @@ import style from './ListBook.module.css'
 
 import { useState, useEffect } from "react";
 
-import cavernas from "../../assets/cavernas_aco.jpg";
+import iluminado from "../../assets/O iluminado.png"
 
 import BookCard from "../BookCard";
 
@@ -38,17 +38,17 @@ const ListBook = () => {
             <h1>LIST BOOK</h1>
 
             <ContainerBook>
-            {
-                books.map((book) => (
-                    <BookCard
-                        cod_livro={book.cod_livro}
-                        nome_livro={book.nome_livro}
-                        autor_livro={book.autor_livro}
-                        imagem={cavernas}
-                        key={book.cod_livro}
-                    />
-                ))
-            }
+                {
+                    books.map((book) => (
+                        <BookCard
+                            cod_livro={book.cod_livro}
+                            nome_livro={book.nome_livro}
+                            autor_livro={book.autor_livro}
+                            imagem={iluminado}
+                            key={book.cod_livro}
+                        />
+                    ))
+                }
             </ContainerBook>
 
         </section>
